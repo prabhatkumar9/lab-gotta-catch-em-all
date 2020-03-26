@@ -10,8 +10,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Bulbasaur;
+import model.Charizard;
+import model.Dragonite;
+import model.Mew;
+import model.Pikachu;
+
 @WebServlet(urlPatterns = { "/pokemon" })
 public class PokemonController extends HttpServlet {
+
+	
 	private static final long serialVersionUID = 1L;
 
 	public PokemonController() {
@@ -38,62 +46,68 @@ public class PokemonController extends HttpServlet {
 		if (value1 != null) {
 			
 			// Create the object for Bulbasaur class and use getters to retrieve the values	
-		/*	  
-			msg = "<center>" + //getter + "  #" + //getter;
-			request.setAttribute("message2",//getter);
-			request.setAttribute("character2", //getter);
-			request.setAttribute("type2",//getter;
-			request.setAttribute("evolution2", //getter);
-			request.setAttribute("baseExp2", //getter);*/
+			 Bulbasaur bulbasaur = new Bulbasaur(null, 0, null, null, null, null);
+			 bulbasaur.getCharacteristics();
+			 
+			msg = "<center>" + bulbasaur.getName() + "  #" + bulbasaur.getNumber();
+			request.setAttribute("message2", bulbasaur.getNumber());
+			request.setAttribute("character2", bulbasaur.getCharacteristics());
+			request.setAttribute("type2",bulbasaur.getType());
+			request.setAttribute("evolution2", bulbasaur.getEvolution());
+			request.setAttribute("baseExp2", bulbasaur.getBaseExp());
 		}
 
 		if (value2 != null) {
 			// Create the object for Charizard class and use getters to retrieve the values	
+			Charizard charizard  = new Charizard(null, 0, null, null, null, null);
 			
-			/*	  
-			msg = "<center>" + //getter + "  #" + //getter;
-			request.setAttribute("message2",//getter);
-			request.setAttribute("character2", //getter);
-			request.setAttribute("type2",//getter;
-			request.setAttribute("evolution2", //getter);
-			request.setAttribute("baseExp2", //getter);*/
+		  
+			msg = "<center>" + charizard.getName() + "  #" + charizard.getNumber();
+			request.setAttribute("message2",charizard.getNumber());
+			request.setAttribute("character2", charizard.getCharacteristics());
+			request.setAttribute("type2",charizard.getType());
+			request.setAttribute("evolution2", charizard.getEvolution());
+			request.setAttribute("baseExp2", charizard.getBaseExp());
 		}
 
 		if (value3 != null) {
 
 			// Create the object for Dragonite class and use getters to retrieve the values	
+			Dragonite dragonite  = new Dragonite(null, 0, null, null, null, null);
 
-			/*	  
-			msg = "<center>" + //getter + "  #" + //getter;
-			request.setAttribute("message2",//getter);
-			request.setAttribute("character2", //getter);
-			request.setAttribute("type2",//getter;
-			request.setAttribute("evolution2", //getter);
-			request.setAttribute("baseExp2", //getter);*/
+				  
+			msg = "<center>" + dragonite.getName() + "  #" + dragonite.getNumber();
+			request.setAttribute("message2",dragonite.getNumber());
+			request.setAttribute("character2", dragonite.getCharacteristics());
+			request.setAttribute("type2",dragonite.getType());
+			request.setAttribute("evolution2",dragonite.getEvolution());
+			request.setAttribute("baseExp2",dragonite.getBaseExp());
 		}
 		if (value4 != null) {
 
 			// Create the object for Mew class and use getters to retrieve the values	
-			/*	  
-			msg = "<center>" + //getter + "  #" + //getter;
-			request.setAttribute("message2",//getter);
-			request.setAttribute("character2", //getter);
-			request.setAttribute("type2",//getter;
-			request.setAttribute("evolution2", //getter);
-			request.setAttribute("baseExp2", //getter);*/
+			 Mew mew = new Mew(null, 0, null, null, null, null);
+			 
+			msg = "<center>" + mew.getName() + "  #" + mew.getNumber();
+			request.setAttribute("message2",mew.getNumber());
+			request.setAttribute("character2", mew.getCharacteristics());
+			request.setAttribute("type2",mew.getType());
+			request.setAttribute("evolution2", mew.getEvolution());
+			request.setAttribute("baseExp2", mew.getBaseExp());
 		}
 
 		if (value5 != null) {
 
 			// Create the object for Pikachu class and use getters to retrieve the values	
-/*getter*/
-			/*	  
-			msg = "<center>" + //getter + "  #" + //getter;
-			request.setAttribute("message2",//getter);
-			request.setAttribute("character2", //getter);
-			request.setAttribute("type2",//getter;
-			request.setAttribute("evolution2", //getter);
-			request.setAttribute("baseExp2", //getter);*/
+			Pikachu pikachu = new Pikachu(null, 0, null, null, null, null);
+			
+				  
+			msg = "<center>" + pikachu.getName() + "  #" + pikachu.getNumber();
+			request.setAttribute("message2",pikachu.getNumber());
+			request.setAttribute("character2", pikachu.getCharacteristics());
+			request.setAttribute("type2",pikachu.getType());
+			request.setAttribute("evolution2", pikachu.getEvolution());
+			request.setAttribute("baseExp2", pikachu.getBaseExp());
 
 		}
 
